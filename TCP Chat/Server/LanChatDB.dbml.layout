@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="LanChatDB">
+  <DataContextMoniker Name="/LanChatDBDataContext" />
+  <nestedChildShapes>
+    <classShape Id="517f5816-b999-43a9-9103-c630b5d49527" absoluteBounds="2, 2.75, 2, 1.3862939453124996">
+      <DataClassMoniker Name="/LanChatDBDataContext/USER" />
+      <nestedChildShapes>
+        <elementListCompartment Id="469748f2-9643-4075-83bb-b4329cf3f1f8" absoluteBounds="2.015, 3.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="717a6db0-d0ac-4fa5-8e7a-493f9d3a0310" absoluteBounds="5.25, 2.75, 2, 1.3862939453125">
+      <DataClassMoniker Name="/LanChatDBDataContext/mMESSAGE" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4c0cf0cb-9604-472f-af90-4e1165375e9e" absoluteBounds="5.265, 3.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(4 : 3.44314697265625); (5.25 : 3.44314697265625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/LanChatDBDataContext/USER/USER_mMESSAGE" />
+      <nodes>
+        <classShapeMoniker Id="517f5816-b999-43a9-9103-c630b5d49527" />
+        <classShapeMoniker Id="717a6db0-d0ac-4fa5-8e7a-493f9d3a0310" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(4 : 3.03407348632812); (5.25 : 3.03407348632812)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/LanChatDBDataContext/USER/USER_mMESSAGE1" />
+      <nodes>
+        <classShapeMoniker Id="517f5816-b999-43a9-9103-c630b5d49527" />
+        <classShapeMoniker Id="717a6db0-d0ac-4fa5-8e7a-493f9d3a0310" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

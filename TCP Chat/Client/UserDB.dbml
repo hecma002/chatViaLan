@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="LANCHAT" Class="UserDBDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-NN7I52M;Initial Catalog=LANCHAT;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False" SettingsObjectName="Client.Properties.Settings" SettingsPropertyName="LANCHATConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.USERS" Member="USERs">
+    <Type Name="USER">
+      <Column Name="ID" Type="System.String" DbType="Char(5) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="UserName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="HashPassword" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="USER_mMESSAGE" Member="mMESSAGEs" ThisKey="ID" OtherKey="IDSender" Type="mMESSAGE" />
+      <Association Name="USER_mMESSAGE1" Member="mMESSAGEs1" ThisKey="ID" OtherKey="IDReciever" Type="mMESSAGE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.mMESSAGE" Member="mMESSAGEs">
+    <Type Name="mMESSAGE">
+      <Column Name="IDSender" Type="System.String" DbType="Char(5) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="IDReciever" Type="System.String" DbType="Char(5) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Content" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="USER_mMESSAGE" Member="USER" ThisKey="IDSender" OtherKey="ID" Type="USER" IsForeignKey="true" />
+      <Association Name="USER_mMESSAGE1" Member="USER1" ThisKey="IDReciever" OtherKey="ID" Type="USER" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>
